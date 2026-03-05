@@ -1,0 +1,237 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<ui:VisualElement name="settings-root" class="mcs-root">
+
+  <!-- SIDEBAR -->
+  <ui:VisualElement class="sidebar">
+    <ui:VisualElement class="sidebar-logo"><ui:Label text="▲" class="sidebar-logo-label"/></ui:VisualElement>
+    <ui:VisualElement name="nav-apphub"   class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-music"    class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-nav"      class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-cluster"  class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-showtime" class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-track"    class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-valet"    class="si"></ui:VisualElement>
+    <ui:VisualElement class="sidebar-spacer"/>
+    <ui:VisualElement name="nav-settings" class="si active"></ui:VisualElement>
+    <ui:VisualElement name="nav-theme"    class="thm"></ui:VisualElement>
+  </ui:VisualElement>
+
+  <!-- SETTINGS LAYOUT -->
+  <ui:VisualElement class="settings-layout">
+
+    <!-- LEFT NAV -->
+    <ui:VisualElement class="settings-nav">
+      <ui:Label text="Settings" class="settings-title"/>
+      <ui:VisualElement name="snav-display"  class="sn-item active"><ui:Label text="Display" style="font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-sound"    class="sn-item"><ui:Label text="Sound" style="font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-lighting" class="sn-item"><ui:Label text="Lighting" style="font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-profiles" class="sn-item"><ui:Label text="Profiles" style="font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-privacy"  class="sn-item"><ui:Label text="Privacy" style="font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-about"    class="sn-item"><ui:Label text="About" style="font-size:13px;"/></ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- RIGHT BODY — panels, only one shown at a time -->
+    <ui:VisualElement class="settings-body">
+
+      <!-- DISPLAY PANEL -->
+      <ui:VisualElement name="panel-display" style="flex-direction:column;">
+        <ui:Label text="Display" class="sb-title"/>
+        <ui:Label text="Customize your visual experience" class="sb-desc"/>
+        <!-- Dark Mode -->
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Dark Mode" class="sr-name"/>
+            <ui:Label text="Use dark theme across all displays" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:VisualElement name="toggle-darkmode" class="toggle-on" style="position:relative;">
+            <ui:VisualElement class="tgl-thumb thumb-on"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <!-- Auto Brightness -->
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Auto Brightness" class="sr-name"/>
+            <ui:Label text="Adjust based on ambient light sensor" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:VisualElement name="toggle-autobright" class="toggle-on" style="position:relative;">
+            <ui:VisualElement class="tgl-thumb thumb-on"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <!-- Cluster Animations -->
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Cluster Animations" class="sr-name"/>
+            <ui:Label text="Startup and transition effects" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:VisualElement name="toggle-animations" class="toggle-on" style="position:relative;">
+            <ui:VisualElement class="tgl-thumb thumb-on"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <!-- Units -->
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Units" class="sr-name"/>
+            <ui:Label text="Speed, distance, temperature format" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:Label text="MPH · °F" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+        <!-- Screen Timeout -->
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Screen Timeout" class="sr-name"/>
+            <ui:Label text="Auto-dim infotainment when parked" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:Label text="5 min" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+      <!-- SOUND PANEL -->
+      <ui:VisualElement name="panel-sound" style="flex-direction:column;">
+        <ui:Label text="Sound" class="sb-title"/>
+        <ui:Label text="Audio and notification settings" class="sb-desc"/>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Navigation Voice" class="sr-name"/>
+            <ui:Label text="Spoken turn-by-turn directions" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:VisualElement name="toggle-haptics" class="toggle-on" style="position:relative;">
+            <ui:VisualElement class="tgl-thumb thumb-on"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Alert Chimes" class="sr-name"/>
+            <ui:Label text="Audible alerts for system notifications" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:VisualElement class="toggle-on" style="position:relative;">
+            <ui:VisualElement class="tgl-thumb thumb-on"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Volume" class="sr-name"/>
+            <ui:Label text="Infotainment master volume" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:Label text="72%" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+      <!-- LIGHTING PANEL -->
+      <ui:VisualElement name="panel-lighting" style="flex-direction:column;">
+        <ui:Label text="Lighting" class="sb-title"/>
+        <ui:Label text="Interior and ambient light controls" class="sb-desc"/>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Ambient Light Sync" class="sr-name"/>
+            <ui:Label text="Sync cabin lights with accent color" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:VisualElement name="toggle-ambient" class="toggle-off" style="position:relative;">
+            <ui:VisualElement class="tgl-thumb thumb-off"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Headlight Mode" class="sr-name"/>
+            <ui:Label text="Auto, high beam assist, manual" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:Label text="Auto" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Interior Brightness" class="sr-name"/>
+            <ui:Label text="Cabin ambient light level" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:Label text="Medium" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+      <!-- PROFILES PANEL -->
+      <ui:VisualElement name="panel-profiles" style="flex-direction:column;">
+        <ui:Label text="Driver Profiles" class="sb-title"/>
+        <ui:Label text="Personalized configurations saved per driver" class="sb-desc"/>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Driver 1 — Primary" class="sr-name"/>
+            <ui:Label text="Sport+ · Dark Mode · MPH" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:Label text="ACTIVE" style="font-size:9px;color:rgb(125,233,235);letter-spacing:2px;background-color:rgba(125,233,235,0.10);padding:4px 10px;border-radius:100px;-unity-font-style:bold;"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Driver 2 — Guest" class="sr-name"/>
+            <ui:Label text="Eco · Light Mode · MPH" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:Label text="Switch" style="font-size:11px;color:rgba(255,255,255,0.55);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Valet Profile" class="sr-name"/>
+            <ui:Label text="Speed limited · All restrictions active" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:Label text="Switch" style="font-size:11px;color:rgba(255,255,255,0.55);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+      <!-- PRIVACY PANEL -->
+      <ui:VisualElement name="panel-privacy" style="flex-direction:column;">
+        <ui:Label text="Privacy" class="sb-title"/>
+        <ui:Label text="Data sharing and location preferences" class="sb-desc"/>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Location Services" class="sr-name"/>
+            <ui:Label text="Allow navigation and geo-fencing" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:VisualElement name="toggle-location" class="toggle-on" style="position:relative;">
+            <ui:VisualElement class="tgl-thumb thumb-on"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Crash Detection" class="sr-name"/>
+            <ui:Label text="Auto-alert emergency services if detected" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:VisualElement name="toggle-crashdetect" class="toggle-on" style="position:relative;">
+            <ui:VisualElement class="tgl-thumb thumb-on"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:VisualElement style="flex-grow:1;">
+            <ui:Label text="Analytics Sharing" class="sr-name"/>
+            <ui:Label text="Share anonymized performance data" class="sr-desc"/>
+          </ui:VisualElement>
+          <ui:VisualElement class="toggle-off" style="position:relative;">
+            <ui:VisualElement class="tgl-thumb thumb-off"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+      <!-- ABOUT PANEL -->
+      <ui:VisualElement name="panel-about" style="flex-direction:column;">
+        <ui:Label text="About" class="sb-title"/>
+        <ui:Label text="System information and software details" class="sb-desc"/>
+        <ui:VisualElement class="setting-row">
+          <ui:Label text="Vehicle" class="sr-name" style="flex-grow:1;"/>
+          <ui:Label text="Motor City Apex — 2027" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:Label text="HMI Version" class="sr-name" style="flex-grow:1;"/>
+          <ui:Label text="v4.0.0" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:Label text="Powertrain ECU" class="sr-name" style="flex-grow:1;"/>
+          <ui:Label text="ECU-9.2.1" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:Label text="Battery Firmware" class="sr-name" style="flex-grow:1;"/>
+          <ui:Label text="BMS-3.7.4" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="setting-row">
+          <ui:Label text="VIN" class="sr-name" style="flex-grow:1;"/>
+          <ui:Label text="1MCS4APEX7X000001" style="font-size:11px;color:rgba(255,255,255,0.55);-unity-font-style:bold;"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:VisualElement>
+</ui:UXML>

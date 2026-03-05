@@ -1,0 +1,217 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<ui:VisualElement name="cluster-root" class="mcs-root">
+
+  <ui:VisualElement class="sidebar">
+    <ui:VisualElement class="sidebar-logo"><ui:Label text="▲" class="sidebar-logo-label"/></ui:VisualElement>
+    <ui:VisualElement name="nav-apphub"   class="si"/>
+    <ui:VisualElement name="nav-music"    class="si"/>
+    <ui:VisualElement name="nav-nav"      class="si"/>
+    <ui:VisualElement name="nav-cluster"  class="si active"/>
+    <ui:VisualElement name="nav-showtime" class="si"/>
+    <ui:VisualElement name="nav-track"    class="si"/>
+    <ui:VisualElement name="nav-valet"    class="si"/>
+    <ui:VisualElement class="sidebar-spacer"/>
+    <ui:VisualElement name="nav-settings" class="si"/>
+    <ui:VisualElement name="nav-theme"    class="thm"/>
+  </ui:VisualElement>
+
+  <!-- LEFT PANEL -->
+  <ui:VisualElement class="left-panel">
+    <!-- Range -->
+    <ui:VisualElement class="card">
+      <ui:VisualElement class="card-header">
+        <ui:VisualElement class="card-header-left">
+          <ui:VisualElement class="card-icon-box ib-teal" name="icon-slot-range"/>
+          <ui:Label text="RANGE" class="card-label"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="card-value-row">
+        <ui:Label name="card-range-value" text="185" class="card-value"/>
+        <ui:Label text="mi" class="card-unit"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="bar-track"><ui:VisualElement name="bar-range" class="bar-fill-teal" style="width:77%;"/></ui:VisualElement>
+    </ui:VisualElement>
+    <!-- Battery -->
+    <ui:VisualElement class="card">
+      <ui:VisualElement class="card-header">
+        <ui:VisualElement class="card-header-left">
+          <ui:VisualElement class="card-icon-box ib-lime" name="icon-slot-battery"/>
+          <ui:Label text="BATTERY" class="card-label"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="card-value-row">
+        <ui:Label name="card-battery-value" text="77" class="card-value"/>
+        <ui:Label text="%" class="card-unit"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="bar-track"><ui:VisualElement name="bar-battery" class="bar-fill-lime" style="width:77%;"/></ui:VisualElement>
+    </ui:VisualElement>
+    <!-- Temperature -->
+    <ui:VisualElement class="card">
+      <ui:VisualElement class="card-header">
+        <ui:VisualElement class="card-header-left">
+          <ui:VisualElement class="card-icon-box ib-danger" name="icon-slot-temperature"/>
+          <ui:Label text="TEMPERATURES" class="card-label"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="temp-grid">
+        <ui:VisualElement class="temp-chip">
+          <ui:Label text="ENGINE" class="temp-lbl"/>
+          <ui:Label text="194°" class="temp-val"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="temp-chip">
+          <ui:Label text="BRAKE" class="temp-lbl"/>
+          <ui:Label text="162°" class="temp-val"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="temp-chip">
+          <ui:Label text="TIRE" class="temp-lbl"/>
+          <ui:Label text="98°" class="temp-val"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <!-- Tire Pressure — fixed, no overflow -->
+    <ui:VisualElement class="card">
+      <ui:VisualElement class="card-header">
+        <ui:VisualElement class="card-header-left">
+          <ui:VisualElement class="card-icon-box ib-teal2" name="icon-slot-tire"/>
+          <ui:Label text="TIRE PRESSURE" class="card-label"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="tire-grid">
+        <ui:VisualElement class="tire-cell">
+          <ui:Label text="FL" class="tire-lbl"/>
+          <ui:Label text="34" class="tire-val"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="tire-cell">
+          <ui:Label text="FR" class="tire-lbl"/>
+          <ui:Label text="34" class="tire-val"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="tire-cell">
+          <ui:Label text="RL" class="tire-lbl"/>
+          <ui:Label text="33" class="tire-val"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="tire-cell">
+          <ui:Label text="RR" class="tire-lbl"/>
+          <ui:Label text="33" class="tire-val"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+
+  <!-- CENTER -->
+  <ui:VisualElement class="center-panel">
+    <!-- Status bar -->
+    <ui:VisualElement class="status-bar">
+      <ui:VisualElement class="status-item"><ui:VisualElement class="status-dot dot-teal"/><ui:Label text="ALL SYSTEMS"/></ui:VisualElement>
+      <ui:VisualElement class="status-item"><ui:VisualElement class="status-dot dot-lime"/><ui:Label text="SPORT+"/></ui:VisualElement>
+      <ui:VisualElement class="status-item"><ui:Label text="72°F"/></ui:VisualElement>
+      <ui:VisualElement class="status-item"><ui:Label name="status-time" text="8:25 AM"/></ui:VisualElement>
+      <ui:VisualElement class="status-item"><ui:Label name="status-date" text="THU MAR 5"/></ui:VisualElement>
+      <ui:VisualElement class="status-item"><ui:VisualElement class="status-dot dot-teal"/><ui:Label text="CONNECTED"/></ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- Speedometer area -->
+    <ui:VisualElement name="speedo-area" class="speedo-area">
+      <ui:Label name="speedo-speed" text="109" class="speedo-big"/>
+      <ui:Label name="speedo-unit-label" text="MPH" class="speedo-unit"/>
+    </ui:VisualElement>
+
+    <!-- Mode row -->
+    <ui:VisualElement class="mode-row">
+      <ui:VisualElement class="mode-item"><ui:VisualElement class="mode-dot dot-lime-m"/><ui:Label text="ECO +12%"/></ui:VisualElement>
+      <ui:VisualElement class="mode-item"><ui:VisualElement class="mode-dot dot-teal-m"/><ui:Label text="SPORT+"/></ui:VisualElement>
+      <ui:VisualElement class="mode-item"><ui:Label text="TRIP 47.3 MI"/></ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- Gear selector -->
+    <ui:VisualElement class="gear-bar">
+      <ui:Label name="gear-R" text="R" class="gear-item"/>
+      <ui:Label name="gear-N" text="N" class="gear-item"/>
+      <ui:Label name="gear-D" text="D" class="gear-item selected"/>
+      <ui:Label name="gear-1" text="1" class="gear-item"/>
+      <ui:Label name="gear-2" text="2" class="gear-item"/>
+      <ui:Label name="gear-3" text="3" class="gear-item"/>
+      <ui:Label name="gear-4" text="4" class="gear-item"/>
+      <ui:Label name="gear-5" text="5" class="gear-item selected"/>
+      <ui:Label name="gear-6" text="6" class="gear-item"/>
+      <ui:Label name="gear-7" text="7" class="gear-item"/>
+    </ui:VisualElement>
+
+    <!-- RPM bar -->
+    <ui:VisualElement class="rpm-wrap">
+      <ui:VisualElement class="rpm-hdr">
+        <ui:Label text="RPM" class="rpm-lbl"/>
+        <ui:Label name="rpm-value" text="5,230" class="rpm-val"/>
+      </ui:VisualElement>
+      <ui:VisualElement name="rpm-segments" class="rpm-segments"/>
+      <ui:VisualElement class="rpm-scale">
+        <ui:Label text="0" class="rpm-num"/>
+        <ui:Label text="2k" class="rpm-num"/>
+        <ui:Label text="4k" class="rpm-num"/>
+        <ui:Label text="6k" class="rpm-num"/>
+        <ui:Label text="8k" class="rpm-num"/>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+
+  <!-- RIGHT PANEL -->
+  <ui:VisualElement class="right-panel">
+    <!-- Odometer -->
+    <ui:VisualElement class="card">
+      <ui:VisualElement class="card-header">
+        <ui:VisualElement class="card-header-left">
+          <ui:VisualElement class="card-icon-box ib-ghost" name="icon-slot-odometer"/>
+          <ui:Label text="ODOMETER" class="card-label"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="card-value-row">
+        <ui:Label text="12,847" class="card-value"/>
+        <ui:Label text="mi" class="card-unit"/>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <!-- Trip -->
+    <ui:VisualElement class="card">
+      <ui:VisualElement class="card-header">
+        <ui:VisualElement class="card-header-left">
+          <ui:VisualElement class="card-icon-box ib-teal" name="icon-slot-trip"/>
+          <ui:Label text="TRIP" class="card-label"/>
+        </ui:VisualElement>
+        <ui:Label text="1 ACTIVE" class="badge-lime"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="card-value-row">
+        <ui:Label text="47.3" class="card-value"/>
+        <ui:Label text="mi" class="card-unit"/>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <!-- Consumption -->
+    <ui:VisualElement class="card">
+      <ui:VisualElement class="card-header">
+        <ui:VisualElement class="card-header-left">
+          <ui:VisualElement class="card-icon-box ib-lime" name="icon-slot-consumption"/>
+          <ui:Label text="AVG CONSUMPTION" class="card-label"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="card-value-row">
+        <ui:Label text="3.2" class="card-value"/>
+        <ui:Label text="mi/kWh" class="card-unit"/>
+      </ui:VisualElement>
+      <ui:VisualElement name="mini-chart" class="mini-chart"/>
+    </ui:VisualElement>
+    <!-- Power Output -->
+    <ui:VisualElement class="card">
+      <ui:VisualElement class="card-header">
+        <ui:VisualElement class="card-header-left">
+          <ui:VisualElement class="card-icon-box ib-lime" name="icon-slot-power"/>
+          <ui:Label text="POWER OUTPUT" class="card-label"/>
+        </ui:VisualElement>
+        <ui:Label text="74%" class="badge-danger"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="card-value-row">
+        <ui:Label text="371" class="card-value"/>
+        <ui:Label text="hp" class="card-unit"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="bar-track"><ui:VisualElement class="bar-fill-danger" style="width:74%;"/></ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+
+</ui:VisualElement>
+</ui:UXML>

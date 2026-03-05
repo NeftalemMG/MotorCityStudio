@@ -1,0 +1,93 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<ui:VisualElement name="showtime-root" class="mcs-root">
+  <ui:VisualElement class="sidebar">
+    <ui:VisualElement class="sidebar-logo"><ui:Label text="▲" class="sidebar-logo-label"/></ui:VisualElement>
+    <ui:VisualElement name="nav-apphub"   class="si"/>
+    <ui:VisualElement name="nav-music"    class="si"/>
+    <ui:VisualElement name="nav-nav"      class="si"/>
+    <ui:VisualElement name="nav-cluster"  class="si"/>
+    <ui:VisualElement name="nav-showtime" class="si active"/>
+    <ui:VisualElement name="nav-track"    class="si"/>
+    <ui:VisualElement name="nav-valet"    class="si"/>
+    <ui:VisualElement class="sidebar-spacer"/>
+    <ui:VisualElement name="nav-settings" class="si"/>
+    <ui:VisualElement name="nav-theme"    class="thm"/>
+  </ui:VisualElement>
+  <ui:VisualElement class="showtime-layout">
+    <!-- Left hero -->
+    <ui:VisualElement class="showtime-left">
+      <ui:VisualElement class="show-badge">
+        <ui:VisualElement class="show-dot"/>
+        <ui:Label text="SHOWTIME MODE" class="show-badge-text"/>
+      </ui:VisualElement>
+      <ui:VisualElement style="flex-direction:row; margin-bottom:12px; flex-wrap:wrap;">
+        <ui:Label text="Motor City " style="font-size:44px;color:rgb(255,255,255);-unity-font-style:bold;letter-spacing:-1.5px;"/>
+        <ui:Label text="Apex." style="font-size:44px;color:rgb(198,255,51);-unity-font-style:bold;letter-spacing:-1.5px;"/>
+      </ui:VisualElement>
+      <ui:Label text="Pure Detroit engineering. Every number below is real — zero fluff, zero filler. This is what 720 horses and a decade of obsession looks like." class="show-desc"/>
+      <!-- Stats row -->
+      <ui:VisualElement class="show-stats">
+        <ui:VisualElement class="show-stat-block">
+          <ui:VisualElement style="flex-direction:row;align-items:baseline;">
+            <ui:Label text="2.8" class="show-stat-v"/>
+            <ui:Label text="s" class="show-stat-u"/>
+          </ui:VisualElement>
+          <ui:Label text="0-60 MPH" class="show-stat-l"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="show-stat-block">
+          <ui:VisualElement style="flex-direction:row;align-items:baseline;">
+            <ui:Label text="720" class="show-stat-v"/>
+            <ui:Label text=" hp" class="show-stat-u"/>
+          </ui:VisualElement>
+          <ui:Label text="PEAK POWER" class="show-stat-l"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="show-stat-block">
+          <ui:VisualElement style="flex-direction:row;align-items:baseline;">
+            <ui:Label text="205" class="show-stat-v"/>
+            <ui:Label text=" mph" class="show-stat-u"/>
+          </ui:VisualElement>
+          <ui:Label text="TOP SPEED" class="show-stat-l"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="show-stat-block-last">
+          <ui:VisualElement style="flex-direction:row;align-items:baseline;">
+            <ui:Label text="750" class="show-stat-v"/>
+            <ui:Label text=" lb·ft" class="show-stat-u"/>
+          </ui:VisualElement>
+          <ui:Label text="PEAK TORQUE" class="show-stat-l"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <!-- Right spec cards -->
+    <ui:VisualElement class="showtime-right">
+      <!-- 0-60 card -->
+      <ui:VisualElement name="btn-launch-control" class="show-spec-card show-spec-teal">
+        <ui:Label text="ACCELERATION" class="show-spec-label"/>
+        <ui:Label text="2.8s" class="show-spec-value"/>
+        <ui:Label text="0 to 60 mph — measured on track" class="show-spec-sub"/>
+        <ui:VisualElement class="show-spec-bar"><ui:VisualElement class="show-spec-bar-fill" style="width:92%;"/></ui:VisualElement>
+      </ui:VisualElement>
+      <!-- Braking card -->
+      <ui:VisualElement class="show-spec-card show-spec-teal">
+        <ui:Label text="BRAKING" class="show-spec-label"/>
+        <ui:Label text="98ft" class="show-spec-value"/>
+        <ui:Label text="60 to 0 mph — carbon ceramic brakes" class="show-spec-sub"/>
+        <ui:VisualElement class="show-spec-bar"><ui:VisualElement class="show-spec-bar-fill" style="width:96%;"/></ui:VisualElement>
+      </ui:VisualElement>
+      <!-- Lateral G card -->
+      <ui:VisualElement class="show-spec-card show-spec-lime">
+        <ui:Label text="LATERAL G-FORCE" class="show-spec-label"/>
+        <ui:Label text="1.18g" class="show-spec-value"/>
+        <ui:Label text="Peak cornering grip — Michelin PS4S" class="show-spec-sub"/>
+        <ui:VisualElement class="show-spec-bar"><ui:VisualElement class="show-spec-bar-fill" style="width:88%;"/></ui:VisualElement>
+      </ui:VisualElement>
+      <!-- Nurburgring card -->
+      <ui:VisualElement name="btn-heritage" class="show-spec-card show-spec-lime">
+        <ui:Label text="NURBURGRING LAP" class="show-spec-label"/>
+        <ui:Label text="6:58" class="show-spec-value"/>
+        <ui:Label text="Nordschleife — production spec, street tires" class="show-spec-sub"/>
+        <ui:VisualElement class="show-spec-bar"><ui:VisualElement class="show-spec-bar-fill" style="width:85%;"/></ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:VisualElement>
+</ui:UXML>

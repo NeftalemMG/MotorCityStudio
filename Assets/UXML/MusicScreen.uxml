@@ -1,0 +1,83 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<ui:VisualElement name="music-root" class="mcs-root">
+  <ui:VisualElement class="sidebar">
+    <ui:VisualElement class="sidebar-logo"><ui:Label text="▲" class="sidebar-logo-label"/></ui:VisualElement>
+    <ui:VisualElement name="nav-apphub"   class="si"/>
+    <ui:VisualElement name="nav-music"    class="si active"/>
+    <ui:VisualElement name="nav-nav"      class="si"/>
+    <ui:VisualElement name="nav-cluster"  class="si"/>
+    <ui:VisualElement name="nav-showtime" class="si"/>
+    <ui:VisualElement name="nav-track"    class="si"/>
+    <ui:VisualElement name="nav-valet"    class="si"/>
+    <ui:VisualElement class="sidebar-spacer"/>
+    <ui:VisualElement name="nav-settings" class="si"/>
+    <ui:VisualElement name="nav-theme"    class="thm"/>
+  </ui:VisualElement>
+  <ui:VisualElement class="music-layout">
+    <!-- Art column -->
+    <ui:VisualElement class="music-art-col">
+      <!-- Album art: colored grid = looks like a real cover -->
+      <ui:VisualElement class="art-box">
+        <ui:VisualElement class="art-row">
+          <ui:VisualElement class="art-q1"/>
+          <ui:VisualElement class="art-q2"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="art-row">
+          <ui:VisualElement class="art-q3"/>
+          <ui:VisualElement class="art-q4"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="art-row">
+          <ui:VisualElement class="art-q5"/>
+          <ui:VisualElement class="art-q6"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="art-row">
+          <ui:VisualElement class="art-q7"/>
+          <ui:VisualElement class="art-q8"/>
+        </ui:VisualElement>
+        <!-- Album title band -->
+        <ui:VisualElement class="art-center-band">
+          <ui:Label text="DETROIT STORIES" class="art-band-text"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="tab-row">
+        <ui:Label name="tab-stream" text="Streaming" class="music-tab active"/>
+        <ui:Label name="tab-fm"     text="FM Radio"  class="music-tab"/>
+        <ui:Label name="tab-am"     text="AM"        class="music-tab"/>
+        <ui:Label name="tab-usb"    text="USB"       class="music-tab"/>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <!-- Content -->
+    <ui:VisualElement class="music-content">
+      <ui:Label text="NOW PLAYING" class="np-label"/>
+      <ui:Label text="Motor City Anthem" class="song-name"/>
+      <ui:Label text="Jack White" class="artist-name"/>
+      <ui:Label text="Detroit Stories · 2027" class="album-name"/>
+      <ui:VisualElement class="prg-track"><ui:VisualElement class="prg-fill" style="width:34%;"/></ui:VisualElement>
+      <ui:VisualElement class="prg-times"><ui:Label text="1:24"/><ui:Label text="4:07"/></ui:VisualElement>
+      <ui:VisualElement class="ctrl-row">
+        <ui:VisualElement class="ctrl-btn"><ui:Label text="⇄" style="font-size:14px;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement class="ctrl-btn"><ui:Label text="⏮" style="font-size:16px;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement class="play-btn"><ui:Label text="⏸" style="font-size:20px;color:rgb(0,0,0);-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement class="ctrl-btn"><ui:Label text="⏭" style="font-size:16px;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement class="ctrl-btn"><ui:Label text="↺" style="font-size:14px;-unity-text-align:middle-center;"/></ui:VisualElement>
+      </ui:VisualElement>
+      <ui:Label text="UP NEXT" class="queue-head"/>
+      <ui:VisualElement class="q-row">
+        <ui:Label text="1" class="q-num"/>
+        <ui:VisualElement style="flex-grow:1;"><ui:Label text="Woodward Dreams" class="q-title"/><ui:Label text="The Raconteurs" class="q-artist"/></ui:VisualElement>
+        <ui:Label text="3:42" class="q-duration"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="q-row">
+        <ui:Label text="2" class="q-num"/>
+        <ui:VisualElement style="flex-grow:1;"><ui:Label text="Midnight on Michigan Ave" class="q-title"/><ui:Label text="Eminem" class="q-artist"/></ui:VisualElement>
+        <ui:Label text="4:18" class="q-duration"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="q-row">
+        <ui:Label text="3" class="q-num"/>
+        <ui:VisualElement style="flex-grow:1;"><ui:Label text="Rouge River" class="q-title"/><ui:Label text="Kid Rock" class="q-artist"/></ui:VisualElement>
+        <ui:Label text="3:55" class="q-duration"/>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:VisualElement>
+</ui:UXML>

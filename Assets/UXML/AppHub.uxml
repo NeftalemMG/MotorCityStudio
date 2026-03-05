@@ -1,0 +1,61 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<ui:VisualElement name="apphub-root" class="mcs-root">
+  <ui:VisualElement class="sidebar">
+    <ui:VisualElement class="sidebar-logo"><ui:Label text="▲" class="sidebar-logo-label"/></ui:VisualElement>
+    <ui:VisualElement name="nav-apphub"   class="si active"/>
+    <ui:VisualElement name="nav-music"    class="si"/>
+    <ui:VisualElement name="nav-nav"      class="si"/>
+    <ui:VisualElement name="nav-cluster"  class="si"/>
+    <ui:VisualElement name="nav-showtime" class="si"/>
+    <ui:VisualElement name="nav-track"    class="si"/>
+    <ui:VisualElement name="nav-valet"    class="si"/>
+    <ui:VisualElement class="sidebar-spacer"/>
+    <ui:VisualElement name="nav-settings" class="si"/>
+    <ui:VisualElement name="nav-theme"    class="thm"/>
+  </ui:VisualElement>
+  <ui:VisualElement class="hub-grid">
+    <ui:VisualElement name="hub-music" class="hub-card hub-card-wide">
+      <ui:VisualElement class="hub-card-top">
+        <ui:VisualElement class="card-icon-box ib-teal" style="align-items:center;justify-content:center;"/>
+        <ui:Label text="Now Playing" class="hub-card-title"/>
+      </ui:VisualElement>
+      <ui:Label text="Motor City Anthem — Jack White · Detroit Stories" class="hub-card-sub"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="hub-nav" class="hub-card">
+      <ui:VisualElement class="hub-card-top">
+        <ui:VisualElement class="card-icon-box ib-lime" style="align-items:center;justify-content:center;"/>
+        <ui:Label text="Navigation" class="hub-card-title"/>
+      </ui:VisualElement>
+      <ui:Label text="Woodward Ave · 18 min away" class="hub-card-sub"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="hub-showtime" class="hub-card">
+      <ui:VisualElement class="hub-card-top">
+        <ui:VisualElement class="card-icon-box ib-mixed" style="align-items:center;justify-content:center;"/>
+        <ui:Label text="Showtime" class="hub-card-title"/>
+      </ui:VisualElement>
+      <ui:Label text="Performance showcase mode" class="hub-card-sub"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="hub-track" class="hub-card">
+      <ui:VisualElement class="hub-card-top">
+        <ui:VisualElement class="card-icon-box ib-lime" style="align-items:center;justify-content:center;"/>
+        <ui:Label text="Track Mode" class="hub-card-title"/>
+      </ui:VisualElement>
+      <ui:Label text="Lap timer · G-force · Telemetry" class="hub-card-sub"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="hub-valet" class="hub-card">
+      <ui:VisualElement class="hub-card-top">
+        <ui:VisualElement class="card-icon-box ib-teal2" style="align-items:center;justify-content:center;"/>
+        <ui:Label text="Valet Mode" class="hub-card-title"/>
+      </ui:VisualElement>
+      <ui:Label text="Speed limit · Geo-fence · Camera" class="hub-card-sub"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="hub-settings" class="hub-card">
+      <ui:VisualElement class="hub-card-top">
+        <ui:VisualElement class="card-icon-box ib-ghost" style="align-items:center;justify-content:center;"/>
+        <ui:Label text="Settings" class="hub-card-title"/>
+      </ui:VisualElement>
+      <ui:Label text="Display, sound, preferences" class="hub-card-sub"/>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:VisualElement>
+</ui:UXML>

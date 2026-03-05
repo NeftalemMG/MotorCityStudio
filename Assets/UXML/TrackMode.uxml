@@ -1,0 +1,169 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<ui:VisualElement name="track-root" class="mcs-root">
+
+  <!-- SIDEBAR -->
+  <ui:VisualElement class="sidebar">
+    <ui:VisualElement class="sidebar-logo"><ui:Label text="▲" class="sidebar-logo-label"/></ui:VisualElement>
+    <ui:VisualElement name="nav-apphub"   class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-music"    class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-nav"      class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-cluster"  class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-showtime" class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-track"    class="si active"></ui:VisualElement>
+    <ui:VisualElement name="nav-valet"    class="si"></ui:VisualElement>
+    <ui:VisualElement class="sidebar-spacer"/>
+    <ui:VisualElement name="nav-settings" class="si"></ui:VisualElement>
+    <ui:VisualElement name="nav-theme"    class="thm"></ui:VisualElement>
+  </ui:VisualElement>
+
+  <!-- TRACK LAYOUT -->
+  <ui:VisualElement class="track-layout">
+
+    <!-- LAP LIST (right column) -->
+    <ui:VisualElement class="lap-list">
+      <ui:Label text="LAP HISTORY" class="lap-hdr"/>
+
+      <ui:VisualElement class="lap-row">
+        <ui:Label text="LAP 3" class="lap-num"/>
+        <ui:Label text="1:38.91" class="lap-time-best"/>
+        <ui:Label text="BEST" class="lap-delta-pos"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="lap-row">
+        <ui:Label text="LAP 7" class="lap-num"/>
+        <ui:Label text="1:42.38" class="lap-time"/>
+        <ui:Label text="+3.47" class="lap-delta-neg"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="lap-row">
+        <ui:Label text="LAP 6" class="lap-num"/>
+        <ui:Label text="1:40.12" class="lap-time"/>
+        <ui:Label text="+1.21" class="lap-delta-neg"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="lap-row">
+        <ui:Label text="LAP 5" class="lap-num"/>
+        <ui:Label text="1:39.44" class="lap-time"/>
+        <ui:Label text="+0.53" class="lap-delta-neg"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="lap-row">
+        <ui:Label text="LAP 4" class="lap-num"/>
+        <ui:Label text="1:41.07" class="lap-time"/>
+        <ui:Label text="+2.16" class="lap-delta-neg"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="lap-row">
+        <ui:Label text="LAP 2" class="lap-num"/>
+        <ui:Label text="1:43.55" class="lap-time"/>
+        <ui:Label text="+4.64" class="lap-delta-neg"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="lap-row">
+        <ui:Label text="LAP 1" class="lap-num"/>
+        <ui:Label text="1:48.22" class="lap-time"/>
+        <ui:Label text="+9.31" class="lap-delta-neg"/>
+      </ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- MAIN CONTENT -->
+    <ui:VisualElement class="track-main">
+
+      <!-- Header -->
+      <ui:VisualElement class="track-head">
+        <ui:Label text="Track Mode" class="track-title"/>
+        <ui:VisualElement class="track-badges">
+          <ui:Label text="Session  03" class="badge-ses"/>
+          <ui:Label text="● Recording" class="badge-rec"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+      <!-- 6 metric cards -->
+      <ui:VisualElement class="metrics-row">
+        <ui:VisualElement class="m-card">
+          <ui:Label text="1:42.38" class="m-val"/>
+          <ui:Label text="CURRENT LAP" class="m-lbl"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="m-card">
+          <ui:Label text="1:38.91" class="m-val-best"/>
+          <ui:Label text="BEST LAP" class="m-lbl"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="m-card">
+          <ui:Label text="+3.47" class="m-val"/>
+          <ui:Label text="DELTA" class="m-lbl"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="m-card">
+          <ui:Label text="7" class="m-val"/>
+          <ui:Label text="LAP COUNT" class="m-lbl"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="m-card">
+          <ui:Label text="128 mph" class="m-val"/>
+          <ui:Label text="TOP SPEED" class="m-lbl"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="m-card">
+          <ui:Label text="4,820 rpm" class="m-val"/>
+          <ui:Label text="CURRENT RPM" class="m-lbl"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+      <!-- Sector cards row -->
+      <ui:VisualElement style="flex-direction:row; gap:8px; flex-grow:1; align-items:stretch;">
+
+        <!-- Sector 1 -->
+        <ui:VisualElement class="m-card" style="flex:1; flex-direction:column; align-items:flex-start; padding:14px 16px;">
+          <ui:VisualElement style="flex-direction:row; justify-content:space-between; width:100%; margin-bottom:4px;">
+            <ui:Label text="SECTOR 1" class="m-lbl"/>
+            <ui:Label text="-0.12" class="lap-delta-pos"/>
+          </ui:VisualElement>
+          <ui:Label text="32.41" style="font-size:26px; color:rgb(255,255,255); -unity-font-style:bold;"/>
+          <ui:VisualElement class="bar-track" style="width:100%; margin-top:8px;">
+            <ui:VisualElement class="bar-fill-lime" style="width:100%;"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Sector 2 -->
+        <ui:VisualElement class="m-card" style="flex:1; flex-direction:column; align-items:flex-start; padding:14px 16px;">
+          <ui:VisualElement style="flex-direction:row; justify-content:space-between; width:100%; margin-bottom:4px;">
+            <ui:Label text="SECTOR 2" class="m-lbl"/>
+            <ui:Label text="+1.84" class="lap-delta-neg"/>
+          </ui:VisualElement>
+          <ui:Label text="38.16" style="font-size:26px; color:rgb(255,255,255); -unity-font-style:bold;"/>
+          <ui:VisualElement class="bar-track" style="width:100%; margin-top:8px;">
+            <ui:VisualElement class="bar-fill-teal" style="width:75%;"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Sector 3 -->
+        <ui:VisualElement class="m-card" style="flex:1; flex-direction:column; align-items:flex-start; padding:14px 16px;">
+          <ui:VisualElement style="flex-direction:row; justify-content:space-between; width:100%; margin-bottom:4px;">
+            <ui:Label text="SECTOR 3" class="m-lbl"/>
+            <ui:Label text="—" style="font-size:8px; color:rgba(255,255,255,0.25);"/>
+          </ui:VisualElement>
+          <ui:Label text="—:——" style="font-size:26px; color:rgba(255,255,255,0.25); -unity-font-style:bold;"/>
+          <ui:VisualElement class="bar-track" style="width:100%; margin-top:8px;">
+            <ui:VisualElement class="bar-fill-teal" style="width:0%;"/>
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Predicted Lap -->
+        <ui:VisualElement class="m-card" style="flex:1; flex-direction:column; align-items:flex-start; padding:14px 16px;">
+          <ui:Label text="PREDICTED LAP" class="m-lbl" style="margin-bottom:4px;"/>
+          <ui:Label text="1:41.22" style="font-size:26px; color:rgb(255,255,255); -unity-font-style:bold;"/>
+          <ui:Label text="+2.31" class="lap-delta-neg" style="margin-top:6px;"/>
+        </ui:VisualElement>
+
+        <!-- Session Best -->
+        <ui:VisualElement class="m-card" style="flex:1; flex-direction:column; align-items:flex-start; padding:14px 16px;">
+          <ui:Label text="SESSION BEST" class="m-lbl" style="margin-bottom:4px;"/>
+          <ui:Label text="1:38.91" style="font-size:26px; color:rgb(198,255,51); -unity-font-style:bold;"/>
+          <ui:Label text="1.8G PEAK" style="font-size:9px; color:rgba(255,255,255,0.25); letter-spacing:1px; margin-top:6px;"/>
+        </ui:VisualElement>
+
+      </ui:VisualElement>
+
+      <!-- Footer buttons -->
+      <ui:VisualElement class="track-foot">
+        <ui:VisualElement name="btn-reset"  class="reset-btn" ><ui:Label text="RESET SESSION"  style="font-size:9px;letter-spacing:2px;-unity-font-style:bold;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement name="btn-share"  class="reset-btn" ><ui:Label text="SHARE"           style="font-size:9px;letter-spacing:2px;-unity-font-style:bold;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement name="btn-export" class="export-btn"><ui:Label text="EXPORT DATA"     style="font-size:9px;letter-spacing:2px;-unity-font-style:bold;-unity-text-align:middle-center;"/></ui:VisualElement>
+      </ui:VisualElement>
+
+    </ui:VisualElement>
+
+  </ui:VisualElement>
+</ui:VisualElement>
+</ui:UXML>

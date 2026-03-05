@@ -1,0 +1,68 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+<ui:VisualElement name="valet-root" class="mcs-root">
+  <ui:VisualElement class="sidebar">
+    <ui:VisualElement class="sidebar-logo"><ui:Label text="▲" class="sidebar-logo-label"/></ui:VisualElement>
+    <ui:VisualElement name="nav-apphub"   class="si"/>
+    <ui:VisualElement name="nav-music"    class="si"/>
+    <ui:VisualElement name="nav-nav"      class="si"/>
+    <ui:VisualElement name="nav-cluster"  class="si"/>
+    <ui:VisualElement name="nav-showtime" class="si"/>
+    <ui:VisualElement name="nav-track"    class="si"/>
+    <ui:VisualElement name="nav-valet"    class="si active"/>
+    <ui:VisualElement class="sidebar-spacer"/>
+    <ui:VisualElement name="nav-settings" class="si"/>
+    <ui:VisualElement name="nav-theme"    class="thm"/>
+  </ui:VisualElement>
+  <ui:VisualElement class="valet-layout">
+    <!-- Left -->
+    <ui:VisualElement class="valet-left">
+      <ui:VisualElement class="valet-badge">
+        <ui:VisualElement class="valet-dot"/>
+        <ui:Label text="PROTECTED" class="valet-badge-text"/>
+      </ui:VisualElement>
+      <ui:Label text="Valet Mode" class="valet-title"/>
+      <ui:Label text="Hand your keys with confidence. Restrict performance, set geofences, and monitor cabin activity." class="valet-desc"/>
+      <ui:VisualElement class="valet-options">
+        <ui:VisualElement class="valet-opt">
+          <ui:VisualElement class="valet-opt-l">
+            <ui:VisualElement class="card-icon-box ib-ghost" name="valet-icon-speed" style="align-items:center;justify-content:center;"/>
+            <ui:Label text="Speed Limit" class="valet-opt-name"/>
+          </ui:VisualElement>
+          <ui:Label text="25 MPH" class="valet-opt-val"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="valet-opt">
+          <ui:VisualElement class="valet-opt-l">
+            <ui:VisualElement class="card-icon-box ib-ghost" name="valet-icon-geo" style="align-items:center;justify-content:center;"/>
+            <ui:Label text="Geo-Fence Radius" class="valet-opt-name"/>
+          </ui:VisualElement>
+          <ui:Label text="0.5 MI" class="valet-opt-val"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="valet-opt">
+          <ui:VisualElement class="valet-opt-l">
+            <ui:VisualElement class="card-icon-box ib-ghost" name="valet-icon-camera" style="align-items:center;justify-content:center;"/>
+            <ui:Label text="Cabin Monitor" class="valet-opt-name"/>
+          </ui:VisualElement>
+          <ui:Label text="ACTIVE" class="valet-opt-val"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="valet-opt">
+          <ui:VisualElement class="valet-opt-l">
+            <ui:VisualElement class="card-icon-box ib-ghost" name="valet-icon-alerts" style="align-items:center;justify-content:center;"/>
+            <ui:Label text="Phone Alerts" class="valet-opt-name"/>
+          </ui:VisualElement>
+          <ui:Label text="ON" class="valet-opt-val"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <!-- Right — lock ring with injected Painter2D icon -->
+    <ui:VisualElement class="valet-right">
+      <ui:VisualElement class="valet-ring">
+        <ui:VisualElement name="valet-ring-icon-slot" style="width:64px;height:64px;align-items:center;justify-content:center;"/>
+        <ui:Label text="SECURED" class="valet-ring-label"/>
+      </ui:VisualElement>
+      <ui:VisualElement name="btn-deactivate" class="valet-btn">
+        <ui:Label text="DEACTIVATE VALET MODE" class="valet-btn-text"/>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:VisualElement>
+</ui:UXML>
