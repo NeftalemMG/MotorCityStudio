@@ -126,7 +126,7 @@
     <ui:VisualElement class="gear-bar">
       <ui:Label name="gear-R" text="R" class="gear-item"/>
       <ui:Label name="gear-N" text="N" class="gear-item"/>
-      <ui:Label name="gear-D" text="D" class="gear-item selected"/>
+      <ui:Label name="gear-D" text="D" class="gear-item"/>
       <ui:Label name="gear-1" text="1" class="gear-item"/>
       <ui:Label name="gear-2" text="2" class="gear-item"/>
       <ui:Label name="gear-3" text="3" class="gear-item"/>

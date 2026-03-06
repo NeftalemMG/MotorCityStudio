@@ -22,12 +22,12 @@
     <!-- LEFT NAV -->
     <ui:VisualElement class="settings-nav">
       <ui:Label text="Settings" class="settings-title"/>
-      <ui:VisualElement name="snav-display"  class="sn-item active"><ui:Label text="Display" style="font-size:13px;"/></ui:VisualElement>
-      <ui:VisualElement name="snav-sound"    class="sn-item"><ui:Label text="Sound" style="font-size:13px;"/></ui:VisualElement>
-      <ui:VisualElement name="snav-lighting" class="sn-item"><ui:Label text="Lighting" style="font-size:13px;"/></ui:VisualElement>
-      <ui:VisualElement name="snav-profiles" class="sn-item"><ui:Label text="Profiles" style="font-size:13px;"/></ui:VisualElement>
-      <ui:VisualElement name="snav-privacy"  class="sn-item"><ui:Label text="Privacy" style="font-size:13px;"/></ui:VisualElement>
-      <ui:VisualElement name="snav-about"    class="sn-item"><ui:Label text="About" style="font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-display"  class="sn-item active"><ui:Label text="Display" style="color:rgb(255,255,255);font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-sound"    class="sn-item"><ui:Label text="Sound" style="color:rgb(255,255,255);font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-lighting" class="sn-item"><ui:Label text="Lighting" style="color:rgb(255,255,255);font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-profiles" class="sn-item"><ui:Label text="Profiles" style="color:rgb(255,255,255);font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-privacy"  class="sn-item"><ui:Label text="Privacy" style="color:rgb(255,255,255);font-size:13px;"/></ui:VisualElement>
+      <ui:VisualElement name="snav-about"    class="sn-item"><ui:Label text="About" style="color:rgb(255,255,255);font-size:13px;"/></ui:VisualElement>
     </ui:VisualElement>
 
     <!-- RIGHT BODY — panels, only one shown at a time -->
@@ -210,23 +210,23 @@
         <ui:Label text="About" class="sb-title"/>
         <ui:Label text="System information and software details" class="sb-desc"/>
         <ui:VisualElement class="setting-row">
-          <ui:Label text="Vehicle" class="sr-name" style="flex-grow:1;"/>
+          <ui:Label text="Vehicle" class="sr-name" style="color:rgb(255,255,255);flex-grow:1;"/>
           <ui:Label text="Motor City Apex — 2027" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
         </ui:VisualElement>
         <ui:VisualElement class="setting-row">
-          <ui:Label text="HMI Version" class="sr-name" style="flex-grow:1;"/>
+          <ui:Label text="HMI Version" class="sr-name" style="color:rgb(255,255,255);flex-grow:1;"/>
           <ui:Label text="v4.0.0" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
         </ui:VisualElement>
         <ui:VisualElement class="setting-row">
-          <ui:Label text="Powertrain ECU" class="sr-name" style="flex-grow:1;"/>
+          <ui:Label text="Powertrain ECU" class="sr-name" style="color:rgb(255,255,255);flex-grow:1;"/>
           <ui:Label text="ECU-9.2.1" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
         </ui:VisualElement>
         <ui:VisualElement class="setting-row">
-          <ui:Label text="Battery Firmware" class="sr-name" style="flex-grow:1;"/>
+          <ui:Label text="Battery Firmware" class="sr-name" style="color:rgb(255,255,255);flex-grow:1;"/>
           <ui:Label text="BMS-3.7.4" style="font-size:12.5px;color:rgb(255,255,255);-unity-font-style:bold;"/>
         </ui:VisualElement>
         <ui:VisualElement class="setting-row">
-          <ui:Label text="VIN" class="sr-name" style="flex-grow:1;"/>
+          <ui:Label text="VIN" class="sr-name" style="color:rgb(255,255,255);flex-grow:1;"/>
           <ui:Label text="1MCS4APEX7X000001" style="font-size:11px;color:rgba(255,255,255,0.55);-unity-font-style:bold;"/>
         </ui:VisualElement>
       </ui:VisualElement>

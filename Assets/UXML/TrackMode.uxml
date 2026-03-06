@@ -141,14 +141,14 @@
 
         <!-- Predicted Lap -->
         <ui:VisualElement class="m-card" style="flex:1; flex-direction:column; align-items:flex-start; padding:14px 16px;">
-          <ui:Label text="PREDICTED LAP" class="m-lbl" style="margin-bottom:4px;"/>
+          <ui:Label text="PREDICTED LAP" class="m-lbl" style="color:rgb(255,255,255);margin-bottom:4px;"/>
           <ui:Label text="1:41.22" style="font-size:26px; color:rgb(255,255,255); -unity-font-style:bold;"/>
-          <ui:Label text="+2.31" class="lap-delta-neg" style="margin-top:6px;"/>
+          <ui:Label text="+2.31" class="lap-delta-neg" style="color:rgb(255,255,255);margin-top:6px;"/>
         </ui:VisualElement>
 
         <!-- Session Best -->
         <ui:VisualElement class="m-card" style="flex:1; flex-direction:column; align-items:flex-start; padding:14px 16px;">
-          <ui:Label text="SESSION BEST" class="m-lbl" style="margin-bottom:4px;"/>
+          <ui:Label text="SESSION BEST" class="m-lbl" style="color:rgb(255,255,255);margin-bottom:4px;"/>
           <ui:Label text="1:38.91" style="font-size:26px; color:rgb(198,255,51); -unity-font-style:bold;"/>
           <ui:Label text="1.8G PEAK" style="font-size:9px; color:rgba(255,255,255,0.25); letter-spacing:1px; margin-top:6px;"/>
         </ui:VisualElement>
@@ -157,9 +157,9 @@
 
       <!-- Footer buttons -->
       <ui:VisualElement class="track-foot">
-        <ui:VisualElement name="btn-reset"  class="reset-btn" ><ui:Label text="RESET SESSION"  style="font-size:9px;letter-spacing:2px;-unity-font-style:bold;-unity-text-align:middle-center;"/></ui:VisualElement>
-        <ui:VisualElement name="btn-share"  class="reset-btn" ><ui:Label text="SHARE"           style="font-size:9px;letter-spacing:2px;-unity-font-style:bold;-unity-text-align:middle-center;"/></ui:VisualElement>
-        <ui:VisualElement name="btn-export" class="export-btn"><ui:Label text="EXPORT DATA"     style="font-size:9px;letter-spacing:2px;-unity-font-style:bold;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement name="btn-reset"  class="reset-btn" ><ui:Label text="RESET SESSION"  style="color:rgb(255,255,255);font-size:9px;letter-spacing:2px;-unity-font-style:bold;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement name="btn-share"  class="reset-btn" ><ui:Label text="SHARE"           style="color:rgb(255,255,255);font-size:9px;letter-spacing:2px;-unity-font-style:bold;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement name="btn-export" class="export-btn"><ui:Label text="EXPORT DATA"     style="color:rgb(255,255,255);font-size:9px;letter-spacing:2px;-unity-font-style:bold;-unity-text-align:middle-center;"/></ui:VisualElement>
       </ui:VisualElement>
 
     </ui:VisualElement>

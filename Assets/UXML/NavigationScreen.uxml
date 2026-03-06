@@ -14,93 +14,173 @@
     <ui:VisualElement name="nav-theme"    class="thm"/>
   </ui:VisualElement>
 
-  <ui:VisualElement class="nav-layout">
-    <!-- Left sidebar panel -->
-    <ui:VisualElement class="nav-sidebar">
-      <ui:VisualElement class="search-box">
-        <ui:Label class="search-input-label" text="Search destination..."/>
+  <!-- Left info panel — unchanged by request -->
+  <ui:VisualElement class="nav-sidebar">
+    <ui:VisualElement class="search-box">
+      <ui:Label class="search-input-label" text="Search destination..."/>
+    </ui:VisualElement>
+    <ui:VisualElement class="nav-card">
+      <ui:Label text="Woodward Dream Cruise" class="nav-dest"/>
+      <ui:Label text="Woodward Ave, Detroit, MI 48203" class="nav-addr"/>
+      <ui:VisualElement class="nav-stats">
+        <ui:VisualElement><ui:Label text="18 min" class="nav-stat-v"/><ui:Label text="ETA" class="nav-stat-l"/></ui:VisualElement>
+        <ui:VisualElement><ui:Label text="12.4 mi" class="nav-stat-v"/><ui:Label text="DISTANCE" class="nav-stat-l"/></ui:VisualElement>
+        <ui:VisualElement><ui:Label text="11:58" class="nav-stat-v"/><ui:Label text="ARRIVAL" class="nav-stat-l"/></ui:VisualElement>
       </ui:VisualElement>
-      <ui:VisualElement class="nav-card">
-        <ui:Label text="Woodward Dream Cruise" class="nav-dest"/>
-        <ui:Label text="Woodward Ave, Detroit, MI 48203" class="nav-addr"/>
-        <ui:VisualElement class="nav-stats">
-          <ui:VisualElement><ui:Label text="18 min" class="nav-stat-v"/><ui:Label text="ETA" class="nav-stat-l"/></ui:VisualElement>
-          <ui:VisualElement><ui:Label text="12.4 mi" class="nav-stat-v"/><ui:Label text="DISTANCE" class="nav-stat-l"/></ui:VisualElement>
-          <ui:VisualElement><ui:Label text="11:58" class="nav-stat-v"/><ui:Label text="ARRIVAL" class="nav-stat-l"/></ui:VisualElement>
-        </ui:VisualElement>
-        <ui:VisualElement class="nav-btns">
-          <ui:VisualElement name="btn-go"      class="btn-go" ><ui:Label text="START ROUTE" style="font-size:10.5px;color:rgb(0,0,0);-unity-font-style:bold;letter-spacing:1.5px;-unity-text-align:middle-center;"/></ui:VisualElement>
-          <ui:VisualElement name="btn-preview" class="btn-alt"><ui:Label text="PREVIEW"     style="font-size:10.5px;-unity-font-style:bold;letter-spacing:1.5px;-unity-text-align:middle-center;"/></ui:VisualElement>
-        </ui:VisualElement>
-      </ui:VisualElement>
-
-      <ui:Label text="RECENT PLACES" class="nav-section-title"/>
-      <ui:VisualElement class="nav-place-row">
-        <ui:VisualElement name="nav-place-icon-home"    class="nav-place-icon"/>
-        <ui:VisualElement><ui:Label text="Home" class="nav-place-name"/><ui:Label text="2.8 mi" class="nav-place-dist"/></ui:VisualElement>
-      </ui:VisualElement>
-      <ui:VisualElement class="nav-place-row">
-        <ui:VisualElement name="nav-place-icon-office"  class="nav-place-icon"/>
-        <ui:VisualElement><ui:Label text="Office — Dearborn" class="nav-place-name"/><ui:Label text="14.2 mi" class="nav-place-dist"/></ui:VisualElement>
-      </ui:VisualElement>
-      <ui:VisualElement class="nav-place-row">
-        <ui:VisualElement name="nav-place-icon-charger" class="nav-place-icon"/>
-        <ui:VisualElement><ui:Label text="Supercharger — M-59" class="nav-place-name"/><ui:Label text="6.1 mi" class="nav-place-dist"/></ui:VisualElement>
-      </ui:VisualElement>
-      <ui:VisualElement class="nav-place-row">
-        <ui:VisualElement name="nav-place-icon-track"   class="nav-place-icon"/>
-        <ui:VisualElement><ui:Label text="M1 Concourse Track" class="nav-place-name"/><ui:Label text="28.7 mi" class="nav-place-dist"/></ui:VisualElement>
+      <ui:VisualElement class="nav-btns">
+        <ui:VisualElement name="btn-go"      class="btn-go"><ui:Label text="START ROUTE" style="font-size:10.5px;color:rgb(0,0,0);-unity-font-style:bold;letter-spacing:1.5px;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement name="btn-preview" class="btn-alt"><ui:Label text="PREVIEW" style="font-size:10.5px;-unity-font-style:bold;letter-spacing:1.5px;-unity-text-align:middle-center;"/></ui:VisualElement>
       </ui:VisualElement>
     </ui:VisualElement>
-
-    <!-- Map area — stylized grid map -->
-    <ui:VisualElement class="map-area">
-      <!-- Grid roads - horizontal -->
-      <ui:VisualElement class="map-road-h" style="top:80px;  left:0; right:0;"/>
-      <ui:VisualElement class="map-road-h" style="top:160px; left:0; right:0;"/>
-      <ui:VisualElement class="map-road-h" style="top:240px; left:0; right:0;"/>
-      <ui:VisualElement class="map-road-h" style="top:320px; left:0; right:0;"/>
-      <ui:VisualElement class="map-road-h" style="top:400px; left:0; right:0;"/>
-      <ui:VisualElement class="map-road-h" style="top:480px; left:0; right:0;"/>
-      <!-- Grid roads - vertical -->
-      <ui:VisualElement class="map-road-v" style="left:80px;  top:0; bottom:50px;"/>
-      <ui:VisualElement class="map-road-v" style="left:200px; top:0; bottom:50px;"/>
-      <ui:VisualElement class="map-road-v" style="left:320px; top:0; bottom:50px;"/>
-      <ui:VisualElement class="map-road-v" style="left:480px; top:0; bottom:50px;"/>
-      <ui:VisualElement class="map-road-v" style="left:600px; top:0; bottom:50px;"/>
-      <!-- Major roads -->
-      <ui:VisualElement class="map-road-major-h" style="top:220px; left:0; right:0;"/>
-      <ui:VisualElement class="map-road-major-v" style="left:290px; top:0; bottom:50px;"/>
-      <!-- Route line -->
-      <ui:VisualElement class="map-route" style="left:293px; top:120px; bottom:280px;"/>
-      <!-- Origin pin glow -->
-      <ui:VisualElement class="map-pin-glow" style="left:282px; top:330px;"/>
-      <ui:VisualElement class="map-pin-me"   style="left:291px; top:339px;"/>
-      <!-- Dest pin glow -->
-      <ui:VisualElement class="map-pin-glow" style="left:282px; top:109px;"/>
-      <ui:VisualElement class="map-pin-end"  style="left:291px; top:118px;"/>
-      <!-- Street labels -->
-      <ui:Label text="WOODWARD AVE"   class="map-street-label" style="left:300px; top:205px;"/>
-      <ui:Label text="I-75"           class="map-street-label" style="left:65px;  top:205px;"/>
-      <ui:Label text="M-10"           class="map-street-label" style="left:485px; top:165px;"/>
-      <ui:Label text="8 MILE RD"      class="map-street-label" style="left:40px;  top:102px;"/>
-      <ui:Label text="GRAND BLVD"     class="map-street-label" style="left:40px;  top:322px;"/>
-      <!-- Compass -->
-      <ui:VisualElement class="map-compass"><ui:Label text="N" class="map-n-label"/></ui:VisualElement>
-      <!-- Zoom -->
-      <ui:VisualElement class="map-zoom">
-        <ui:Label text="+" class="zoom-btn"/>
-        <ui:Label text="−" class="zoom-btn"/>
-      </ui:VisualElement>
-      <!-- Bottom ETA strip -->
-      <ui:VisualElement class="map-label-strip">
-        <ui:Label text="18" class="map-eta-val"/>
-        <ui:Label text="MIN  " class="map-eta-lbl"/>
-        <ui:Label text="12.4" class="map-eta-val"/>
-        <ui:Label text="MI  " class="map-eta-lbl"/>
-        <ui:Label text="ETA 11:58 AM" class="map-eta-lbl"/>
-      </ui:VisualElement>
+    <ui:Label text="RECENT PLACES" class="nav-section-title"/>
+    <ui:VisualElement class="nav-place-row">
+      <ui:VisualElement name="nav-place-icon-home"    class="nav-place-icon"/>
+      <ui:VisualElement><ui:Label text="Home" class="nav-place-name"/><ui:Label text="2.8 mi" class="nav-place-dist"/></ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="nav-place-row">
+      <ui:VisualElement name="nav-place-icon-office"  class="nav-place-icon"/>
+      <ui:VisualElement><ui:Label text="Office - Dearborn" class="nav-place-name"/><ui:Label text="14.2 mi" class="nav-place-dist"/></ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="nav-place-row">
+      <ui:VisualElement name="nav-place-icon-charger" class="nav-place-icon"/>
+      <ui:VisualElement><ui:Label text="Supercharger - M-59" class="nav-place-name"/><ui:Label text="6.1 mi" class="nav-place-dist"/></ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="nav-place-row">
+      <ui:VisualElement name="nav-place-icon-track"   class="nav-place-icon"/>
+      <ui:VisualElement><ui:Label text="M1 Concourse Track" class="nav-place-name"/><ui:Label text="28.7 mi" class="nav-place-dist"/></ui:VisualElement>
     </ui:VisualElement>
   </ui:VisualElement>
+
+  <!-- Right: modern abstract map panel -->
+  <ui:VisualElement class="map-canvas">
+
+    <!-- Dark base with subtle grid overlay -->
+    <ui:VisualElement class="map-bg"/>
+
+    <!-- GRID lines — thin, spaced like a topographic print -->
+    <!-- Horizontal -->
+    <ui:VisualElement class="mg-h" style="top:60px;"/>
+    <ui:VisualElement class="mg-h" style="top:120px;"/>
+    <ui:VisualElement class="mg-h" style="top:180px;"/>
+    <ui:VisualElement class="mg-h" style="top:240px;"/>
+    <ui:VisualElement class="mg-h" style="top:300px;"/>
+    <ui:VisualElement class="mg-h" style="top:360px;"/>
+    <ui:VisualElement class="mg-h" style="top:420px;"/>
+    <ui:VisualElement class="mg-h" style="top:480px;"/>
+    <ui:VisualElement class="mg-h" style="top:540px;"/>
+    <ui:VisualElement class="mg-h" style="top:600px;"/>
+    <ui:VisualElement class="mg-h" style="top:660px;"/>
+    <!-- Vertical -->
+    <ui:VisualElement class="mg-v" style="left:70px;"/>
+    <ui:VisualElement class="mg-v" style="left:140px;"/>
+    <ui:VisualElement class="mg-v" style="left:210px;"/>
+    <ui:VisualElement class="mg-v" style="left:280px;"/>
+    <ui:VisualElement class="mg-v" style="left:350px;"/>
+    <ui:VisualElement class="mg-v" style="left:420px;"/>
+    <ui:VisualElement class="mg-v" style="left:490px;"/>
+    <ui:VisualElement class="mg-v" style="left:560px;"/>
+    <ui:VisualElement class="mg-v" style="left:630px;"/>
+    <ui:VisualElement class="mg-v" style="left:700px;"/>
+    <ui:VisualElement class="mg-v" style="left:770px;"/>
+    <ui:VisualElement class="mg-v" style="left:840px;"/>
+    <ui:VisualElement class="mg-v" style="left:910px;"/>
+    <ui:VisualElement class="mg-v" style="left:980px;"/>
+    <ui:VisualElement class="mg-v" style="left:1050px;"/>
+
+    <!-- MAJOR ROADS — bright white thick lines -->
+    <!-- Woodward Ave (diagonal-ish major artery) represented as vertical bold -->
+    <ui:VisualElement class="mroad-v" style="left:420px;"/>
+    <!-- I-75 (thick horizontal band) -->
+    <ui:VisualElement class="mroad-h" style="top:300px;"/>
+    <!-- 8 Mile road -->
+    <ui:VisualElement class="mroad-h" style="top:120px;"/>
+    <!-- M-10 Lodge -->
+    <ui:VisualElement class="mroad-v" style="left:210px;"/>
+    <!-- Grand Blvd arc — represented as thinner major road -->
+    <ui:VisualElement class="mroad-v mroad-thin" style="left:700px;"/>
+    <ui:VisualElement class="mroad-h mroad-thin" style="top:480px;"/>
+
+    <!-- BLOCKS — dark filled rectangles that look like city blocks -->
+    <ui:VisualElement class="blk" style="left:215px; top:125px; width:200px; height:170px;"/>
+    <ui:VisualElement class="blk" style="left:425px; top:125px; width:270px; height:170px;"/>
+    <ui:VisualElement class="blk" style="left:705px; top:125px; width:250px; height:170px;"/>
+    <ui:VisualElement class="blk" style="left:215px; top:305px; width:200px; height:170px;"/>
+    <ui:VisualElement class="blk blk-lit" style="left:425px; top:305px; width:270px; height:170px;"/>
+    <ui:VisualElement class="blk" style="left:705px; top:305px; width:250px; height:170px;"/>
+    <ui:VisualElement class="blk" style="left:215px; top:485px; width:200px; height:130px;"/>
+    <ui:VisualElement class="blk" style="left:425px; top:485px; width:270px; height:130px;"/>
+    <ui:VisualElement class="blk blk-lit2" style="left:705px; top:485px; width:250px; height:130px;"/>
+    <ui:VisualElement class="blk" style="left:960px; top:125px; width:140px; height:350px;"/>
+
+    <!-- ROUTE LINE — thick, glowing teal path along Woodward -->
+    <!-- Vertical segment from dest down to current pos -->
+    <ui:VisualElement class="rt-glow" style="left:411px; top:60px; width:18px; height:340px;"/>
+    <ui:VisualElement class="rt-line" style="left:416px; top:60px; width:8px; height:340px;"/>
+    <!-- Horizontal jog at intersection -->
+    <ui:VisualElement class="rt-glow" style="left:411px; top:294px; width:90px; height:18px;"/>
+    <ui:VisualElement class="rt-line" style="left:416px; top:299px; width:85px; height:8px;"/>
+    <!-- Continue down to current pos -->
+    <ui:VisualElement class="rt-glow" style="left:490px; top:295px; width:18px; height:200px;"/>
+    <ui:VisualElement class="rt-line" style="left:495px; top:299px; width:8px; height:200px;"/>
+
+    <!-- DESTINATION PIN -->
+    <ui:VisualElement class="pin-glow-end" style="left:400px; top:40px;"/>
+    <ui:VisualElement class="pin-end-bg"   style="left:408px; top:48px;"/>
+    <ui:VisualElement class="pin-end-core" style="left:413px; top:53px;"/>
+
+    <!-- ORIGIN PIN (current location) -->
+    <ui:VisualElement class="pin-glow-me"  style="left:484px; top:482px;"/>
+    <ui:VisualElement class="pin-me-ring"  style="left:490px; top:488px;"/>
+    <ui:VisualElement class="pin-me-core"  style="left:496px; top:494px;"/>
+
+    <!-- STREET LABELS -->
+    <ui:Label text="WOODWARD AVE"  class="slabel" style="left:426px; top:200px;"/>
+    <ui:Label text="I-75"          class="slabel-major" style="left:70px;  top:282px;"/>
+    <ui:Label text="8 MILE RD"     class="slabel-major" style="left:70px;  top:102px;"/>
+    <ui:Label text="M-10 LODGE"    class="slabel" style="left:220px; top:200px;"/>
+    <ui:Label text="GRAND BLVD"    class="slabel" style="left:708px; top:200px;"/>
+    <ui:Label text="7 MILE RD"     class="slabel" style="left:70px;  top:462px;"/>
+
+    <!-- COMPASS -->
+    <ui:VisualElement class="compass-ring">
+      <ui:Label text="N" class="compass-n"/>
+    </ui:VisualElement>
+
+    <!-- SCALE BAR -->
+    <ui:VisualElement class="scale-bar-wrap">
+      <ui:VisualElement class="scale-bar"/>
+      <ui:Label text="1 mi" class="scale-lbl"/>
+    </ui:VisualElement>
+
+    <!-- ETA BANNER — bottom strip -->
+    <ui:VisualElement class="eta-strip">
+      <ui:VisualElement class="eta-block">
+        <ui:Label text="18" class="eta-v"/>
+        <ui:Label text="MIN" class="eta-l"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="eta-divider"/>
+      <ui:VisualElement class="eta-block">
+        <ui:Label text="12.4" class="eta-v"/>
+        <ui:Label text="MI" class="eta-l"/>
+      </ui:VisualElement>
+      <ui:VisualElement class="eta-divider"/>
+      <ui:VisualElement class="eta-block">
+        <ui:Label text="11:58 AM" class="eta-v"/>
+        <ui:Label text="ARRIVAL" class="eta-l"/>
+      </ui:VisualElement>
+      <ui:VisualElement style="flex-grow:1;"/>
+      <ui:VisualElement class="eta-dest-chip">
+        <ui:Label text="▲  WOODWARD DREAM CRUISE" class="eta-dest-text"/>
+      </ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- ZOOM CONTROLS -->
+    <ui:VisualElement class="zoom-col">
+      <ui:Label text="+" class="zoom-btn"/>
+      <ui:Label text="−" class="zoom-btn"/>
+    </ui:VisualElement>
+
+  </ui:VisualElement>
+
 </ui:VisualElement>
 </ui:UXML>

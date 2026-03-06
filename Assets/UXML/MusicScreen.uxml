@@ -36,7 +36,7 @@
         </ui:VisualElement>
         <!-- Album title band -->
         <ui:VisualElement class="art-center-band">
-          <ui:Label text="DETROIT STORIES" class="art-band-text"/>
+          <ui:Label text="Drake" class="art-band-text"/>
         </ui:VisualElement>
       </ui:VisualElement>
       <ui:VisualElement class="tab-row">
@@ -49,32 +49,32 @@
     <!-- Content -->
     <ui:VisualElement class="music-content">
       <ui:Label text="NOW PLAYING" class="np-label"/>
-      <ui:Label text="Motor City Anthem" class="song-name"/>
-      <ui:Label text="Jack White" class="artist-name"/>
-      <ui:Label text="Detroit Stories · 2027" class="album-name"/>
+      <ui:Label text="Headlines" class="song-name"/>
+      <ui:Label text="Drake" class="artist-name"/>
+      <ui:Label text="Take Care · 2011" class="album-name"/>
       <ui:VisualElement class="prg-track"><ui:VisualElement class="prg-fill" style="width:34%;"/></ui:VisualElement>
       <ui:VisualElement class="prg-times"><ui:Label text="1:24"/><ui:Label text="4:07"/></ui:VisualElement>
       <ui:VisualElement class="ctrl-row">
-        <ui:VisualElement class="ctrl-btn"><ui:Label text="⇄" style="font-size:14px;-unity-text-align:middle-center;"/></ui:VisualElement>
-        <ui:VisualElement class="ctrl-btn"><ui:Label text="⏮" style="font-size:16px;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement class="ctrl-btn"><ui:Label text="⇄" style="color:rgb(255,255,255);font-size:14px;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement class="ctrl-btn"><ui:Label text="⏮" style="color:rgb(255,255,255);font-size:16px;-unity-text-align:middle-center;"/></ui:VisualElement>
         <ui:VisualElement class="play-btn"><ui:Label text="⏸" style="font-size:20px;color:rgb(0,0,0);-unity-text-align:middle-center;"/></ui:VisualElement>
-        <ui:VisualElement class="ctrl-btn"><ui:Label text="⏭" style="font-size:16px;-unity-text-align:middle-center;"/></ui:VisualElement>
-        <ui:VisualElement class="ctrl-btn"><ui:Label text="↺" style="font-size:14px;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement class="ctrl-btn"><ui:Label text="⏭" style="color:rgb(255,255,255);font-size:16px;-unity-text-align:middle-center;"/></ui:VisualElement>
+        <ui:VisualElement class="ctrl-btn"><ui:Label text="↺" style="color:rgb(255,255,255);font-size:14px;-unity-text-align:middle-center;"/></ui:VisualElement>
       </ui:VisualElement>
       <ui:Label text="UP NEXT" class="queue-head"/>
       <ui:VisualElement class="q-row">
         <ui:Label text="1" class="q-num"/>
-        <ui:VisualElement style="flex-grow:1;"><ui:Label text="Woodward Dreams" class="q-title"/><ui:Label text="The Raconteurs" class="q-artist"/></ui:VisualElement>
+        <ui:VisualElement style="flex-grow:1;"><ui:Label text="Blinding Lights" class="q-title"/><ui:Label text="The Weeknd" class="q-artist"/></ui:VisualElement>
         <ui:Label text="3:42" class="q-duration"/>
       </ui:VisualElement>
       <ui:VisualElement class="q-row">
         <ui:Label text="2" class="q-num"/>
-        <ui:VisualElement style="flex-grow:1;"><ui:Label text="Midnight on Michigan Ave" class="q-title"/><ui:Label text="Eminem" class="q-artist"/></ui:VisualElement>
+        <ui:VisualElement style="flex-grow:1;"><ui:Label text="Stumblin' In" class="q-title"/><ui:Label text="Cyril" class="q-artist"/></ui:VisualElement>
         <ui:Label text="4:18" class="q-duration"/>
       </ui:VisualElement>
       <ui:VisualElement class="q-row">
         <ui:Label text="3" class="q-num"/>
-        <ui:VisualElement style="flex-grow:1;"><ui:Label text="Rouge River" class="q-title"/><ui:Label text="Kid Rock" class="q-artist"/></ui:VisualElement>
+        <ui:VisualElement style="flex-grow:1;"><ui:Label text="we never dated" class="q-title"/><ui:Label text="sombr" class="q-artist"/></ui:VisualElement>
         <ui:Label text="3:55" class="q-duration"/>
       </ui:VisualElement>
     </ui:VisualElement>
