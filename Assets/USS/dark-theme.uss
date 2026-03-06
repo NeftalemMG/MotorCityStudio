@@ -1,32 +1,12 @@
 /*
  * MOTOR CITY STUDIO — DARK THEME v5
- * Key changes from v4:
- *   - All label/status text sizes boosted significantly
- *   - Status bar text: 12px → stronger white
- *   - Card labels: 9px → 11px, color rgba(255,255,255,0.55) not 0.25
- *   - Card values: 28px, card units visible
- *   - Mode row / gear / RPM labels all larger
- *   - Tire cell overflow fixed: no content escapes card
- *   - MPH label bigger
  */
 
-VisualElement { -unity-font-definition: initial; }
-
-/* Force white text on ALL elements — beats runtime theme */
-* {
-    color: rgb(255, 255, 255);
-}
-Label {
+.mcs-root Label {
     color: rgb(255, 255, 255);
     -unity-text-align: upper-left;
     white-space: nowrap;
     overflow: hidden;
-}
-
-/* ── ROOT ──────────────────────────────────────── */
-:root {
-    --unity-colors-default-text: rgb(255, 255, 255);
-    --unity-colors-label-text: rgb(255, 255, 255);
 }
 
 .mcs-root {
@@ -177,7 +157,7 @@ Label {
 
 /* CARD LABEL — was 9px rgba(255,255,255,0.25) — now bigger & brighter */
 .card-label {
-    font-size: 11px;
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.60);
     letter-spacing: 1.5px;
     -unity-font-style: bold;
@@ -192,7 +172,7 @@ Label {
 }
 
 .card-value {
-    font-size: 30px;
+    font-size: 42px;
     color: rgb(255, 255, 255);
     -unity-font-style: bold;
     -unity-text-align: upper-left;
@@ -200,10 +180,10 @@ Label {
 }
 
 .card-unit {
-    font-size: 14px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.65);
-    margin-left: 3px;
-    margin-bottom: 4px;
+    margin-left: 4px;
+    margin-bottom: 6px;
 }
 
 /* ── PROGRESS BAR ───────────────────────────────── */
@@ -282,39 +262,43 @@ Label {
 .tire-grid {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 4px;
-    gap: 4px;
+    margin-top: 6px;
+    gap: 5px;
     overflow: hidden;
     flex-shrink: 0;
 }
 
 .tire-cell {
-    width: 46%;
+    width: 45%;
+    flex-grow: 1;
     background-color: rgba(18, 18, 24, 0.8);
-    border-radius: 8px;
+    border-radius: 7px;
     border-width: 1px;
-    border-color: rgba(125, 233, 235, 0.10);
-    padding-top: 5px; padding-bottom: 5px;
-    padding-left: 3px; padding-right: 3px;
+    border-color: rgba(125, 233, 235, 0.12);
+    padding-top: 6px; padding-bottom: 6px;
+    padding-left: 2px; padding-right: 2px;
     align-items: center;
     overflow: hidden;
     flex-shrink: 0;
+    height: 46px;
 }
 
 .tire-lbl {
-    font-size: 9px;
-    color: rgba(255, 255, 255, 0.45);
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.52);
     letter-spacing: 1px;
     -unity-text-align: middle-center;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
     -unity-font-style: bold;
+    flex-shrink: 0;
 }
 
 .tire-val {
-    font-size: 17px;
-    color: rgba(255, 255, 255, 0.90);
+    font-size: 18px;
+    color: rgb(255, 255, 255);
     -unity-font-style: bold;
     -unity-text-align: middle-center;
+    flex-shrink: 0;
 }
 
 /* ── STATUS BAR ─────────────────────────────────── */
@@ -353,20 +337,28 @@ Label {
     flex-grow: 1;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
+    flex-direction: column;
+    padding-top: 150px;
+}
+
+/* Override the global Label upper-left for anything inside speedo-area */
+.speedo-area Label {
+    -unity-text-align: upper-center;
+    white-space: normal;
 }
 
 /* Speed number — large */
 .speedo-big {
     font-size: 160px;
     color: rgb(255, 255, 255);
-    -unity-text-align: middle-center;
-    position: absolute;
-    top: 65px;
-    left: 0; right: 0;
     -unity-font-style: bold;
+    flex-shrink: 0;
+    width: 1240px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* MPH — was tiny and faint, now visible */
@@ -374,11 +366,11 @@ Label {
     font-size: 15px;
     color: rgba(255, 255, 255, 0.55);
     letter-spacing: 6px;
-    -unity-text-align: middle-center;
-    position: absolute;
-    top: 278px;
-    left: 0; right: 0;
     -unity-font-style: bold;
+    flex-shrink: 0;
+    width: 1240px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* ── MODE ROW ────────────────────────────────────── */
@@ -431,8 +423,13 @@ Label {
 }
 
 .gear-item.selected {
-    background-color: rgba(125, 233, 235, 0.18);
-    color: rgb(255, 255, 255);
+    background-color: rgba(125, 233, 235, 0.22);
+    color: rgb(125, 233, 235);
+    border-width: 1px;
+    border-color: rgba(125, 233, 235, 0.40);
+}
+.gear-item.gear-mode {
+    color: rgba(255, 255, 255, 0.55);
 }
 
 /* ── RPM ─────────────────────────────────────────── */
@@ -444,9 +441,9 @@ Label {
 .rpm-val  { font-size: 13px; color: rgba(255,255,255,0.85); -unity-font-style: bold; }
 .rpm-segments { flex-direction: row; height: 14px; }
 .rpm-segment  { flex-grow: 1; height: 14px; border-radius: 1px; background-color: rgba(125,233,235,0.07); margin-right: 2px; }
-.rpm-segment.lit  { background-color: rgb(125, 233, 235); }
-.rpm-segment.warn { background-color: rgb(198, 255, 51); }
-.rpm-segment.crit { background-color: rgb(255, 64, 96); }
+.rpm-segment.lit                    { background-color: rgb(125, 233, 235); }
+.rpm-segment.lit.rpm-warn-zone      { background-color: rgb(198, 255, 51); }
+.rpm-segment.lit.rpm-crit-zone      { background-color: rgb(255, 64, 96); }
 .rpm-scale { flex-direction: row; justify-content: space-between; margin-top: 3px; padding-left: 2px; padding-right: 2px; }
 .rpm-num   { font-size: 9px; color: rgba(255,255,255,0.35); }
 
@@ -745,3 +742,110 @@ Label {
 .show-spec-lime  { border-color: rgba(198,255,51,0.15); }
 .show-spec-lime  .show-spec-label { color: rgba(198,255,51,0.7); }
 .show-spec-bar   { background-color: rgba(255,255,255,0.06); }
+
+/* ── NAVIGATION MAP v2 — city block design ───────── */
+.map-canvas {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(6, 8, 12);
+}
+.map-bg {
+    position: absolute; left:0; top:0; right:0; bottom:0;
+    background-color: rgb(6, 8, 12);
+}
+/* fine grid */
+.mg-h { position:absolute; left:0; right:0; height:1px; background-color:rgba(125,233,235,0.05); }
+.mg-v { position:absolute; top:0; bottom:48px; width:1px;  background-color:rgba(125,233,235,0.05); }
+/* major roads */
+.mroad-h { position:absolute; left:0; right:0; height:8px; background-color:rgba(200,210,230,0.18); }
+.mroad-v { position:absolute; top:0; bottom:48px; width:8px; background-color:rgba(200,210,230,0.18); }
+.mroad-thin { background-color:rgba(200,210,230,0.11); }
+/* city blocks */
+.blk {
+    position:absolute;
+    background-color: rgb(11, 14, 20);
+    border-radius: 2px;
+}
+.blk-lit  { background-color: rgb(14, 22, 28); }
+.blk-lit2 { background-color: rgb(10, 16, 24); }
+/* route glow + line */
+.rt-glow {
+    position:absolute;
+    background-color: rgba(125,233,235,0.18);
+    border-radius: 8px;
+}
+.rt-line {
+    position:absolute;
+    background-color: rgb(125,233,235);
+    border-radius: 4px;
+}
+/* destination pin */
+.pin-glow-end {
+    position:absolute; width:36px; height:36px; border-radius:18px;
+    background-color: rgba(198,255,51,0.18);
+}
+.pin-end-bg {
+    position:absolute; width:20px; height:20px; border-radius:10px;
+    background-color: rgb(198,255,51);
+    border-width:3px; border-color:rgb(6,8,12);
+}
+.pin-end-core {
+    position:absolute; width:10px; height:10px; border-radius:5px;
+    background-color: rgb(6,8,12);
+}
+/* current location pin */
+.pin-glow-me {
+    position:absolute; width:36px; height:36px; border-radius:18px;
+    background-color: rgba(125,233,235,0.20);
+}
+.pin-me-ring {
+    position:absolute; width:24px; height:24px; border-radius:12px;
+    background-color: rgb(125,233,235);
+    border-width:3px; border-color:rgb(6,8,12);
+}
+.pin-me-core {
+    position:absolute; width:12px; height:12px; border-radius:6px;
+    background-color: rgb(6,8,12);
+}
+/* labels */
+.slabel {
+    position:absolute;
+    font-size:9px; color:rgba(200,210,230,0.30);
+    letter-spacing:1.5px; -unity-font-style:bold;
+}
+.slabel-major {
+    position:absolute;
+    font-size:9px; color:rgba(200,210,230,0.50);
+    letter-spacing:1.5px; -unity-font-style:bold;
+}
+/* compass */
+.compass-ring {
+    position:absolute; top:16px; right:16px;
+    width:40px; height:40px; border-radius:20px;
+    background-color:rgba(10,14,22,0.92);
+    border-width:1px; border-color:rgba(125,233,235,0.20);
+    align-items:center; justify-content:center;
+}
+.compass-n { font-size:14px; color:rgb(255,64,96); -unity-font-style:bold; -unity-text-align:middle-center; }
+/* scale bar */
+.scale-bar-wrap { position:absolute; bottom:62px; left:18px; flex-direction:row; align-items:center; gap:6px; }
+.scale-bar { width:60px; height:3px; background-color:rgba(255,255,255,0.30); border-radius:2px; }
+.scale-lbl { font-size:9px; color:rgba(255,255,255,0.35); letter-spacing:1px; }
+/* ETA strip */
+.eta-strip {
+    position:absolute; bottom:0; left:0; right:0; height:48px;
+    background-color:rgba(4,6,10,0.95);
+    border-top-width:1px; border-top-color:rgba(125,233,235,0.12);
+    flex-direction:row; align-items:center;
+    padding-left:20px; padding-right:20px; gap:0;
+}
+.eta-block { flex-direction:column; align-items:flex-start; padding-left:0; padding-right:20px; }
+.eta-v { font-size:18px; color:rgb(255,255,255); -unity-font-style:bold; }
+.eta-l { font-size:8px; color:rgba(255,255,255,0.40); letter-spacing:2px; margin-top:1px; }
+.eta-divider { width:1px; height:28px; background-color:rgba(125,233,235,0.12); margin-right:20px; flex-shrink:0; }
+.eta-dest-chip { background-color:rgba(125,233,235,0.10); border-radius:100px; border-width:1px; border-color:rgba(125,233,235,0.20); padding-left:14px; padding-right:14px; padding-top:6px; padding-bottom:6px; align-items:center; justify-content:center; }
+.eta-dest-text { font-size:10px; color:rgb(125,233,235); letter-spacing:1.5px; -unity-font-style:bold; }
+/* zoom */
+.zoom-col { position:absolute; bottom:62px; right:16px; flex-direction:column; gap:2px; }
+.zoom-btn { width:36px; height:36px; background-color:rgba(10,14,22,0.92); border-radius:8px; border-width:1px; border-color:rgba(125,233,235,0.14); font-size:20px; color:rgba(255,255,255,0.60); -unity-text-align:middle-center; }
