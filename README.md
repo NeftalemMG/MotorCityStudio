@@ -1,5 +1,7 @@
 # MCS Dashboard
 
+https://github.com/user-attachments/assets/481250b0-cbd9-47b2-b95e-50628b68bd18
+
 Interactive sports car infotainment UI built in Unity using UI Toolkit (UIElements).
 
 ---
